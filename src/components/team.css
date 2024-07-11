@@ -1,0 +1,28 @@
+.team-section {
+    padding: 2rem 0;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .team-member {
+    text-align: center;
+  }
+  
+  .team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .team-member h3 {
+    margin: 0.5rem 0 0.25rem;
+  }
+  
+  .team-member p {
+    margin: 0;
+  }
+  

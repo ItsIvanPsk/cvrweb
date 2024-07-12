@@ -1,6 +1,7 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import InfoCards from '../components/InfoCards';
+import Hero from '../components/core/hero/Hero';
+import InfoCards from '../components/core/infocards/InfoCards';
+
 
 function Home() {
   return (

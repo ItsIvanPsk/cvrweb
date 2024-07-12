@@ -1,7 +1,5 @@
 import React from 'react';
-import Login from '../components/login';
-import Hero from '../components/Hero';
-import Footer from '../components/Footer';
+import Login from '../components/users/login/login';
 
 function LoginPage() {
   return (

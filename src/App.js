@@ -1,13 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './styles.css'; 
 import Home from './pages/home-page';
 import Experiences from './pages/experience-page';
 import Events from './pages/events';
 import Services from './pages/services';
 import Develops from './pages/develops';
-import Navbar from './components/NavBar';
-import './styles.css'; 
+import Navbar from './components/core/navbar/NavBar';
 import KnowUs from './pages/know-us';
+import LoginPage from './pages/login-page';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Route path="/eventos" element={<Events />} />
         <Route path="/servicios" element={<Services />} />
         <Route path="/desarrollos" element={<Develops />} />
+        <Route path="/desarrollos" element={<Develops />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </Router>
   );

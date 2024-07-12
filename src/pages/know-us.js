@@ -1,8 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Team from '../components/Team';
-import Projects from '../components/Projects';
-import Testimonials from '../components/Testimonials';
+import Team from '../components/services/team/Team';
+import Projects from '../components/services/team/Projects';
+import Testimonials from '../components/services/testimonials/Testimonials';
 
 function KnowUs() {
   return (

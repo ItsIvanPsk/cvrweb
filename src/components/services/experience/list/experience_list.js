@@ -6,7 +6,7 @@ const ListExperience = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/experiences/get_experience_list')
+    fetch('https://localhost:5000/api/experiences/get_experience_list')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

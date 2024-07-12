@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './navbar.css';  // Importa el archivo de estilos personalizados
+import './navbar.css'; 
 
 function NavBar() {
   return (
@@ -21,6 +21,15 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/conocenos">Conócenos</Link>
+            </li>
+            <li>
+              <a href='/perfil'>
+                <img
+                  src='https://www.svgrepo.com/show/118301/autorship.svg'
+                  alt='Icono de perfil'
+                  className='navbar-profile'
+                />
+              </a>
             </li>
           </ul>
         </div>

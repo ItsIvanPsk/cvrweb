@@ -9,6 +9,7 @@ import Develops from './pages/develops';
 import Navbar from './components/core/navbar/NavBar';
 import KnowUs from './pages/know-us';
 import LoginPage from './pages/login-page';
+import ProfilePage from './pages/profile-page';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="/eventos" element={<Events />} />
         <Route path="/servicios" element={<Services />} />
         <Route path="/desarrollos" element={<Develops />} />
-        <Route path="/desarrollos" element={<Develops />} />
+        <Route path="/perfil" element={<ProfilePage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
     </Router>

@@ -14,10 +14,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "clean": "rimraf ./node_modules/.cache && rimraf ./dist",
+    "start": "npm run clean && react-scripts start",
+    "build": "npm run clean && react-scripts build"
   },
   "eslintConfig": {
     "extends": [
@@ -36,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1"
   }
 }

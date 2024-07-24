@@ -15,10 +15,43 @@ const Login = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Datos del formulario:', formData);
-    
+
+    const { username, password } = formData;
+
+    if (!username || !password) {
+      alert('Por favor, complete todos los campos.');
+      return;
+    }
+
+    try {
+      const response = await fetch('http://localhost:5000/api/users/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        const token = data.Token;
+
+        if (token) {
+          localStorage.setItem('token', token);
+          localStorage.setItem('user', JSON.stringify(data));
+          window.location.href = '/perfil';
+        } else {
+          alert('No se recibió el token.');
+        }
+      } else {
+        alert('Usuario o contraseña incorrectos.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Hubo un error al procesar la solicitud.');
+    }
   };
 
   const handleReset = () => {
